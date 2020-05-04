@@ -14,5 +14,5 @@ workflows:
           requires:
             - aws-ecr/build_and_push_image
           family: "nginx"
-          cluster-name: "${AWS_RESOURCE_NAME_PREFIX}-cluster"
+          cluster-name: "steph-cluster"
           container-image-name-updates: "container=nginx,tag=${CIRCLE_SHA1}"
